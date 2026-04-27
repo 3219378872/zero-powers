@@ -1,6 +1,8 @@
 {
   "name": "zero-powers-dev",
-  "description": "Development marketplace for zero-powers go-zero microservices plugin",
+  "metadata": {
+    "description": "Development marketplace for zero-powers go-zero microservices plugin"
+  },
   "owner": {
     "name": "go-zero Community",
     "email": "go-zero@go-zero.dev"
