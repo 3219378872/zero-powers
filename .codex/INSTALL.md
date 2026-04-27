@@ -1,4 +1,4 @@
-# Installing zero-powers for OpenAI Codex
+# Installing zero-powers for Codex
 
 ## Prerequisites
 - Codex CLI or Codex IDE integration
@@ -6,36 +6,51 @@
 
 ## Installation
 
-```bash
-# Clone as Codex plugin
-git clone https://github.com/zeromicro/zero-powers.git ~/.codex/plugins/zero-powers
-```
+### Referenced by an existing Codex plugin repository
 
-## Configuration
-
-Add to your Codex plugin configuration:
+This repository is the plugin package, not the marketplace catalog. Keep the
+marketplace entry in your existing Codex plugin repository and point it at the
+location where this plugin is checked out, for example:
 
 ```json
 {
-  "plugins": {
-    "zero-powers": {
-      "enabled": true,
-      "skills": ["all"],
-      "agents": ["all"]
-    }
-  }
+  "name": "zero-powers",
+  "source": {
+    "source": "local",
+    "path": "./plugins/zero-powers"
+  },
+  "policy": {
+    "installation": "AVAILABLE",
+    "authentication": "ON_INSTALL"
+  },
+  "category": "Developer Tools"
 }
+```
+
+Clone or copy this repository to the path referenced by that external
+marketplace entry.
+
+### As a direct local plugin
+
+Clone or copy this repository into a Codex plugin location that preserves the
+plugin root, including:
+
+```text
+.codex-plugin/plugin.json
+skills/
 ```
 
 ## Activation
 
-After installation, Codex will automatically load the appropriate go-zero domain skill when working with:
+The Codex manifest exposes the `skills/` directory. Codex can load the
+appropriate go-zero domain skill when working with:
 - `.api` files (REST API definitions)
 - `.proto` files (gRPC service definitions)
 - `internal/handler/`, `internal/logic/`, `internal/svc/` directories
 - go-zero `go.mod` dependencies by zeromicro
 
-Agents are invoked manually: `@gozero-architect`, `@gozero-reviewer`, `@gozero-best-practices`.
+The `agents/` files are kept for platforms that support agent markdown files.
+They are not declared as Codex marketplace capabilities in this version.
 
 ## Verification
 
