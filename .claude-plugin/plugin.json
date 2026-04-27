@@ -1,0 +1,23 @@
+{
+  "name": "zero-powers",
+  "description": "go-zero microservices development plugin — 10 domain skills (REST API, gRPC, database, resilience, observability, deployment, event-driven, testing, security, goctl) plus 3 specialized agents for architecture, code review, and production readiness",
+  "version": "0.1.0",
+  "author": {
+    "name": "go-zero Community",
+    "email": "go-zero@go-zero.dev"
+  },
+  "homepage": "https://github.com/zeromicro/zero-powers",
+  "repository": "https://github.com/zeromicro/zero-powers",
+  "license": "MIT",
+  "keywords": [
+    "go-zero",
+    "microservices",
+    "golang",
+    "grpc",
+    "rest-api",
+    "code-generation",
+    "skills",
+    "agents",
+    "best-practices"
+  ]
+}
