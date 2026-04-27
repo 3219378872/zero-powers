@@ -1,5 +1,18 @@
 # RPC Patterns
 
+## Table of Contents
+- [Core Architecture](#core-architecture)
+- [Basic RPC Service Pattern](#basic-rpc-service-pattern)
+- [RPC Configuration Pattern](#rpc-configuration-pattern)
+- [RPC Client Pattern](#rpc-client-pattern)
+- [Error Handling Pattern](#error-handling-pattern)
+- [Interceptor Pattern](#interceptor-pattern)
+- [Streaming Pattern](#streaming-pattern)
+- [Service Discovery Pattern](#service-discovery-pattern)
+- [Load Balancing](#load-balancing)
+- [Best Practices Summary](#best-practices-summary)
+- [When to Use RPC vs REST](#when-to-use-rpc-vs-rest)
+
 ## Core Architecture
 
 go-zero uses gRPC for RPC communication with built-in:

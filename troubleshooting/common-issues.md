@@ -1,5 +1,17 @@
 # Common Issues and Solutions
 
+## Table of Contents
+- [Installation Issues](#installation-issues)
+- [Code Generation Issues](#code-generation-issues)
+- [Runtime Issues](#runtime-issues)
+- [API Issues](#api-issues)
+- [RPC Issues](#rpc-issues)
+- [Database Issues](#database-issues)
+- [Middleware Issues](#middleware-issues)
+- [Configuration Issues](#configuration-issues)
+- [Performance Issues](#performance-issues)
+- [Logging Issues](#logging-issues)
+
 ## Installation Issues
 
 ### Issue: goctl command not found

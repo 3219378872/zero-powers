@@ -1,5 +1,17 @@
 # Concurrency & Data Safety Patterns
 
+## Table of Contents
+- [Decision Matrix: Which Pattern to Use](#decision-matrix-which-pattern-to-use)
+- [1. CAS — Conditional Atomic Update](#1-cas--conditional-atomic-update)
+- [2. Optimistic Locking](#2-optimistic-locking)
+- [3. Pessimistic Locking](#3-pessimistic-locking)
+- [4. Distributed Lock (Redis)](#4-distributed-lock-redis)
+- [5. Idempotency](#5-idempotency)
+- [6. Distributed Transactions — Saga Pattern](#6-distributed-transactions--saga-pattern)
+- [7. Saga Compensation Recovery](#7-saga-compensation-recovery)
+- [8. Distributed Lock Expiration Strategy](#8-distributed-lock-expiration-strategy)
+- [Best Practices Summary](#best-practices-summary)
+
 Patterns for preventing data corruption, lost updates, and race conditions in go-zero microservices.
 
 ## Decision Matrix: Which Pattern to Use

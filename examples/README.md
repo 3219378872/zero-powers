@@ -1,6 +1,6 @@
 # Examples
 
-This directory contains example scripts and demo code for zero-skills tutorials.
+This directory contains example scripts and demo code for zero-powers tutorials.
 
 ## demo-project/
 
@@ -31,7 +31,7 @@ cd demo-project
 - ✅ 测试 Windsurf 配置（.windsurfrules）
 - ✅ 测试 submodule 更新功能
 - ✅ 验证 ai-context 内容结构
-- ✅ 验证 zero-skills 模式引用
+- ✅ 验证 zero-powers 模式引用
 
 **使用方法：**
 
@@ -40,7 +40,7 @@ cd demo-project
 ./examples/verify-tutorial.sh
 
 # 或者使用绝对路径
-bash /path/to/zero-skills/examples/verify-tutorial.sh
+bash /path/to/zero-powers/examples/verify-tutorial.sh
 ```
 
 **测试内容：**
@@ -68,9 +68,9 @@ bash /path/to/zero-skills/examples/verify-tutorial.sh
    - 检查 ai-context 包含必需的章节
    - 确认文档结构完整
 
-6. **zero-skills 引用验证**
+6. **zero-powers 引用验证**
    - 验证所有模式文档链接存在
-   - 确认引用正确指向 zero-skills 仓库
+   - 确认引用正确指向 zero-powers 仓库
 
 **输出示例：**
 
@@ -80,7 +80,7 @@ bash /path/to/zero-skills/examples/verify-tutorial.sh
 Zero-Skills AI Ecosystem Tutorial Verification
 ================================================
 
-✓ 创建测试目录: /tmp/zero-skills-demo-12345
+✓ 创建测试目录: /tmp/zero-powers-demo-12345
 
 === 测试 1: GitHub Copilot 配置 ===
 ✓ PASS: GitHub Copilot 配置
@@ -104,7 +104,7 @@ Zero-Skills AI Ecosystem Tutorial Verification
 
 ```bash
 # 脚本会输出清理命令，例如：
-rm -rf /tmp/zero-skills-demo-12345
+rm -rf /tmp/zero-powers-demo-12345
 ```
 
 **注意事项：**

@@ -1,4 +1,4 @@
-# zero-skills Checklists
+# zero-powers Checklists
 
 > 完工前 / 上线前的强制性核对清单，供 `superpowers:verification-before-completion` 阶段消费。
 
@@ -27,4 +27,4 @@
 - 每项为**可二元判断**的问题（通过 / 不通过），不要模糊描述
 - 每项提供**验证方式**（命令 / grep 模式 / 手动检查步骤）
 - 分类：**阻塞型**（未通过不得上线） vs **建议型**（未通过需评估）
-- 参考 `zero-skills/best-practices/` 对应章节时给出文件路径
+- 参考 `zero-powers/best-practices/` 对应章节时给出文件路径

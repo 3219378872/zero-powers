@@ -3,9 +3,8 @@ name: security
 description: >-
   Use when implementing security in go-zero services — mTLS configuration,
   RBAC authorization, OAuth/OIDC integration, CORS settings, audit logging,
-  API versioning strategy, error code standardization, pagination patterns,
-  or OpenAPI/Swagger documentation. Also trigger when configuring service-to-service
-  authentication or defining API governance rules.
+  or input validation. Also trigger when configuring service-to-service
+  authentication or defining access control rules.
 ---
 
 # go-zero Security & API Governance

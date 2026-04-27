@@ -1,5 +1,19 @@
 # Database Patterns
 
+## Table of Contents
+- [SQL Database with go-zero](#sql-database-with-gozero)
+- [Basic SQL Operations Pattern](#basic-sql-operations-pattern)
+- [CRUD Operations Pattern](#crud-operations-pattern)
+- [Custom Query Pattern](#custom-query-pattern)
+- [sql.Null* 类型与动态 SQL 模式](#sqlnull-类型与动态-sql-模式)
+- [Transaction Pattern](#transaction-pattern)
+- [Caching Pattern](#caching-pattern)
+- [Connection Pooling Pattern](#connection-pooling-pattern)
+- [Error Handling Pattern](#error-handling-pattern)
+- [MongoDB Pattern](#mongodb-pattern)
+- [Best Practices Summary](#best-practices-summary)
+- [When to Use Each Database Type](#when-to-use-each-database-type)
+
 ## SQL Database with go-zero
 
 go-zero provides `sqlx` and `sqlc` packages for SQL operations with built-in connection pooling, caching, and resilience.

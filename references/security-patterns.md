@@ -1,5 +1,18 @@
 # Security Patterns for go-zero
 
+## Table of Contents
+- [Overview](#overview)
+- [1. mTLS — Service-to-Service Encryption](#1-mtls--service-to-service-encryption)
+- [2. RBAC — Role-Based Access Control](#2-rbac--role-based-access-control)
+- [3. OAuth 2.0 / OIDC Integration](#3-oauth-20--oidc-integration)
+- [4. CORS Configuration](#4-cors-configuration)
+- [5. Security Response Headers](#5-security-response-headers)
+- [6. Secret Management & Rotation](#6-secret-management--rotation)
+- [7. Audit Logging](#7-audit-logging)
+- [8. Input Validation & Sanitization](#8-input-validation--sanitization)
+- [Security Checklist](#security-checklist)
+- [Cross-References](#cross-references)
+
 ## Overview
 
 This guide covers enterprise-level security patterns for go-zero microservices:

@@ -1,16 +1,16 @@
-# Using zero-skills with Cursor
+# Using zero-powers with Cursor
 
-This guide explains how to use zero-skills with [Cursor](https://cursor.sh), the AI-first code editor.
+This guide explains how to use zero-powers with [Cursor](https://cursor.sh), the AI-first code editor.
 
 ## Installation
 
-### Step 1: Clone zero-skills
+### Step 1: Clone zero-powers
 
 ```bash
 cd your-gozero-project/
 
 # Clone to a local directory
-git clone https://github.com/zeromicro/zero-skills.git .ai-context/zero-skills
+git clone https://github.com/zeromicro/zero-powers.git .ai-context/zero-powers
 ```
 
 ### Step 2: Create .cursorrules
@@ -53,11 +53,11 @@ Follow these go-zero patterns strictly:
 ## Pattern References
 
 When I need detailed patterns, I'll reference these files:
-- REST APIs: .ai-context/zero-skills/references/rest-api-patterns.md
-- RPC services: .ai-context/zero-skills/references/rpc-patterns.md
-- Database: .ai-context/zero-skills/references/database-patterns.md
-- Resilience: .ai-context/zero-skills/references/resilience-patterns.md
-- Troubleshooting: .ai-context/zero-skills/troubleshooting/common-issues.md
+- REST APIs: .ai-context/zero-powers/references/rest-api-patterns.md
+- RPC services: .ai-context/zero-powers/references/rpc-patterns.md
+- Database: .ai-context/zero-powers/references/database-patterns.md
+- Resilience: .ai-context/zero-powers/references/resilience-patterns.md
+- Troubleshooting: .ai-context/zero-powers/troubleshooting/common-issues.md
 
 ## Common Commands
 
@@ -84,7 +84,7 @@ Cursor will apply these rules to all conversations in your project.
 When you need detailed patterns, ask Cursor to read the specific file:
 
 ```
-Read .ai-context/zero-skills/references/rest-api-patterns.md and help me implement a user API
+Read .ai-context/zero-powers/references/rest-api-patterns.md and help me implement a user API
 ```
 
 ### Example Conversations
@@ -114,7 +114,7 @@ Cursor has context limits. Keep `.cursorrules` focused on key principles and ref
 
 Reference files directly in chat:
 ```
-@.ai-context/zero-skills/references/database-patterns.md help me implement caching
+@.ai-context/zero-powers/references/database-patterns.md help me implement caching
 ```
 
 ### Combine with ai-context
@@ -128,7 +128,7 @@ git clone https://github.com/zeromicro/ai-context.git .ai-context/ai-context
 Then reference it in `.cursorrules`:
 ```markdown
 Follow workflows from .ai-context/ai-context/
-For detailed patterns, see .ai-context/zero-skills/
+For detailed patterns, see .ai-context/zero-powers/
 ```
 
 ## Limitations
@@ -165,11 +165,11 @@ Compared to Claude Code, Cursor:
 **Problem:** Suggestions don't match latest go-zero.
 
 **Solutions:**
-1. Update zero-skills: `cd .ai-context/zero-skills && git pull`
+1. Update zero-powers: `cd .ai-context/zero-powers && git pull`
 2. Check go-zero version compatibility
 
 ## Additional Resources
 
 - [Cursor Documentation](https://cursor.sh/docs)
 - [go-zero Official Docs](https://go-zero.dev)
-- [zero-skills Pattern Guides](../references/)
+- [zero-powers Pattern Guides](../references/)

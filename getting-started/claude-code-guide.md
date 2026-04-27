@@ -1,13 +1,12 @@
-# Using zero-skills with Claude Code
+# Using zero-powers with Claude Code
 
-This guide explains how to use zero-skills effectively with Claude Code, leveraging its advanced skills capabilities.
+This guide explains how to use zero-powers effectively with Claude Code, leveraging its advanced skills capabilities.
 
 ## Table of Contents
 - [Quick Reference](#quick-reference)
 - [Installation](#installation)
 - [Basic Usage](#basic-usage)
 - [Advanced Features](#advanced-features)
-- [Skill Pattern Examples](#skill-pattern-examples)
 - [Example Workflows](#example-workflows)
 - [Troubleshooting](#troubleshooting)
 - [Best Practices](#best-practices)
@@ -20,8 +19,8 @@ This guide explains how to use zero-skills effectively with Claude Code, leverag
 
 | Command | Description |
 |---------|-------------|
-| `/zero-skills` | Load skill for go-zero help |
-| `/zero-skills [query]` | Load skill with specific question |
+| `/zero-powers` | Load skill for go-zero help |
+| `/zero-powers [query]` | Load skill with specific question |
 | Ask "What skills are available?" | Check loaded skills |
 
 ### Key Principles
@@ -56,7 +55,7 @@ This guide explains how to use zero-skills effectively with Claude Code, leverag
 |------|---------|---------------|
 | **goctl** | Code generation | `goctl api go`, `goctl model`, etc. |
 | **ai-context** | Quick workflows | GitHub Copilot integration |
-| **zero-skills** | Knowledge base | `/zero-skills` or automatic |
+| **zero-powers** | Knowledge base | `/zero-powers` or automatic |
 
 ---
 
@@ -64,7 +63,7 @@ This guide explains how to use zero-skills effectively with Claude Code, leverag
 
 ### Option 1: Project-Level (Recommended for go-zero projects)
 
-Add zero-skills to your project for automatic discovery:
+Add zero-powers to your project for automatic discovery:
 
 ```bash
 cd your-gozero-project/
@@ -72,8 +71,8 @@ cd your-gozero-project/
 # Create skills directory
 mkdir -p .claude/skills
 
-# Clone zero-skills
-git clone https://github.com/zeromicro/zero-skills.git .claude/skills/zero-skills
+# Clone zero-powers
+git clone https://github.com/zeromicro/zero-powers.git .claude/skills/zero-powers
 ```
 
 Claude Code automatically discovers skills in `.claude/skills/` directories.
@@ -86,8 +85,8 @@ Install to your personal skills directory to use with any go-zero project:
 # Create personal skills directory
 mkdir -p ~/.claude/skills
 
-# Clone zero-skills
-git clone https://github.com/zeromicro/zero-skills.git ~/.claude/skills/zero-skills
+# Clone zero-powers
+git clone https://github.com/zeromicro/zero-powers.git ~/.claude/skills/zero-powers
 ```
 
 ### Option 3: Enterprise-Level (For organizations)
@@ -111,21 +110,21 @@ Claude automatically loads the skill when you:
 ```
 You: How do I create a REST API with go-zero?
 ```
-Claude loads zero-skills and provides detailed guidance from [references/rest-api-patterns.md](../references/rest-api-patterns.md).
+Claude loads zero-powers and provides detailed guidance from [references/rest-api-patterns.md](../references/rest-api-patterns.md).
 
 ### Manual Invocation
 
-Invoke directly with `/zero-skills`:
+Invoke directly with `/zero-powers`:
 
 ```
-/zero-skills
+/zero-powers
 ```
 
 Or with arguments:
 ```
-/zero-skills Create a user management API with authentication
-/zero-skills How do I implement rate limiting?
-/zero-skills Explain the three-layer architecture
+/zero-powers Create a user management API with authentication
+/zero-powers How do I implement rate limiting?
+/zero-powers Explain the three-layer architecture
 ```
 
 ### Check Skill Availability
@@ -134,7 +133,7 @@ Or with arguments:
 You: What skills are available?
 ```
 
-Claude lists all loaded skills. Look for `zero-skills` in the output.
+Claude lists all loaded skills. Look for `zero-powers` in the output.
 
 ## Advanced Features
 
@@ -156,8 +155,6 @@ Current services in this project:
 
 The commands execute before Claude sees the prompt, injecting actual file paths.
 
-See [skill-patterns/analyze-project.md](../skill-patterns/analyze-project.md) for a complete example.
-
 ### Subagent Workflows
 
 Use `context: fork` to run skills in isolated subagent contexts:
@@ -178,8 +175,6 @@ Benefits:
 - Read-only tools prevent accidental modifications
 - Focused analysis without distractions
 
-See [skill-patterns/analyze-project.md](../skill-patterns/analyze-project.md) for details.
-
 #### Plan Agent (Architecture Design)
 ```yaml
 ---
@@ -195,8 +190,6 @@ Benefits:
 - Optimized for planning and design
 - No code execution (prevents premature implementation)
 - Fresh perspective on architecture
-
-See [skill-patterns/plan-architecture.md](../skill-patterns/plan-architecture.md) for details.
 
 ### Tool Restrictions
 
@@ -246,24 +239,13 @@ Access arguments:
 - `$ARGUMENTS`: All arguments combined
 - `${CLAUDE_SESSION_ID}`: Current session ID
 
-See [skill-patterns/generate-service.md](../skill-patterns/generate-service.md) for details.
-
-## Skill Pattern Examples
-
-See [skill-patterns/](../skill-patterns/) for advanced skill patterns:
-
-- **[analyze-project.md](../skill-patterns/analyze-project.md)** - Explore agent with dynamic context
-- **[generate-service.md](../skill-patterns/generate-service.md)** - Argument passing patterns
-- **[plan-architecture.md](../skill-patterns/plan-architecture.md)** - Plan agent for design
-- **[README.md](../skill-patterns/README.md)** - Full guide with best practices
-
 ## Example Workflows
 
 ### Workflow 1: Building a New REST API
 
 **Step 1: Manual invocation for planning**
 ```
-/zero-skills Create a user management REST API with CRUD operations
+/zero-powers Create a user management REST API with CRUD operations
 ```
 
 Claude:
@@ -277,7 +259,7 @@ Claude:
 You: How do I handle authentication in middleware?
 ```
 
-Claude references [references/rest-api-patterns.md](../references/rest-api-patterns.md#middleware-patterns) and provides examples.
+Claude references [references/rest-api-patterns.md](../references/rest-api-patterns.md#middleware-pattern) and provides examples.
 
 **Step 3: Troubleshoot issues**
 ```
@@ -301,8 +283,6 @@ Claude (automatically or if you have the analyze skill):
 4. Identifies anti-patterns
 5. Returns summary to main conversation
 
-See [skill-patterns/analyze-project.md](../skill-patterns/analyze-project.md) for this skill template.
-
 ### Workflow 3: Planning Microservices Architecture
 
 **Use the plan-microservices skill:**
@@ -318,8 +298,6 @@ Claude (using Plan agent):
 4. Provides `.api` and `.proto` examples
 5. Suggests implementation order
 
-See [skill-patterns/plan-architecture.md](../skill-patterns/plan-architecture.md) for this skill template.
-
 ### Workflow 4: Using goctl in Terminal
 
 Claude runs goctl commands directly in the terminal:
@@ -329,7 +307,7 @@ You: Create a user API service with database operations
 ```
 
 Claude:
-1. Uses zero-skills for patterns and structure
+1. Uses zero-powers for patterns and structure
 2. Writes the `.api` spec file
 3. Runs `goctl api go -api user.api -dir . --style go_zero` in terminal
 4. Runs `goctl model mysql datasource ...` for database models
@@ -348,16 +326,16 @@ See [references/goctl-commands.md](../references/goctl-commands.md) for the comp
 1. Check if skill is available: `What skills are available?`
 2. Verify installation:
    ```bash
-   ls -la ~/.claude/skills/zero-skills/SKILL.md
+   ls -la ~/.claude/skills/zero-powers/SKILL.md
    # or
-   ls -la .claude/skills/zero-skills/SKILL.md
+   ls -la .claude/skills/zero-powers/SKILL.md
    ```
-3. Manually invoke: `/zero-skills`
+3. Manually invoke: `/zero-powers`
 4. Check frontmatter in SKILL.md (must have valid YAML)
 
 ### Skill Not Triggering Automatically
 
-**Problem**: Have to manually invoke with `/zero-skills` every time.
+**Problem**: Have to manually invoke with `/zero-powers` every time.
 
 **Solutions**:
 1. Improve the description in SKILL.md to match your queries
@@ -391,19 +369,19 @@ Files: !`ls -la`
 
 ### Skill Triggers Too Often
 
-**Problem**: zero-skills loads even when not working with go-zero.
+**Problem**: zero-powers loads even when not working with go-zero.
 
 **Solutions**:
 1. Make description more specific in SKILL.md
 2. Add `disable-model-invocation: true` to prevent automatic loading
-3. Only invoke manually with `/zero-skills` when needed
+3. Only invoke manually with `/zero-powers` when needed
 
 ### Quick Troubleshooting Table
 
 | Problem | Solution |
 |---------|----------|
 | Skill not loading | Check: `What skills are available?` |
-| Not auto-triggering | Invoke manually: `/zero-skills` |
+| Not auto-triggering | Invoke manually: `/zero-powers` |
 | Need specific pattern | Ask: "Show me REST API middleware patterns" |
 | Want to analyze project | Say: "Analyze this go-zero project" |
 
@@ -413,12 +391,12 @@ Files: !`ls -la`
 
 Instead of:
 ```
-/zero-skills Help me
+/zero-powers Help me
 ```
 
 Be specific:
 ```
-/zero-skills Implement rate limiting for my API service
+/zero-powers Implement rate limiting for my API service
 ```
 
 ### 2. Leverage Supporting Files
@@ -432,18 +410,18 @@ Claude loads just [references/database-patterns.md](../references/database-patte
 
 ### 3. Combine Knowledge with Execution
 
-Use zero-skills for knowledge, goctl for execution:
-- zero-skills: "What pattern should I use?"
+Use zero-powers for knowledge, goctl for execution:
+- zero-powers: "What pattern should I use?"
 - goctl: "Generate the code" (AI runs in terminal)
 
 ### 4. Create Custom Skills
 
-Build project-specific skills in `.claude/skills/` that extend zero-skills:
+Build project-specific skills in `.claude/skills/` that extend zero-powers:
 
 ```
 .claude/
 └── skills/
-    ├── zero-skills/         # Base knowledge
+    ├── zero-powers/         # Base knowledge
     └── myproject-gozero/    # Project-specific
         └── SKILL.md
 ```
@@ -455,12 +433,12 @@ name: myproject-gozero
 description: Project-specific go-zero patterns for MyProject
 ---
 
-This project uses zero-skills patterns with these customizations:
+This project uses zero-powers patterns with these customizations:
 - All APIs use JWT authentication (see internal/middleware/auth.go)
 - Database models use soft deletes
 - Service discovery via Kubernetes (not etcd)
 
-For general patterns, see zero-skills. This skill covers project-specific overrides.
+For general patterns, see zero-powers. This skill covers project-specific overrides.
 ```
 
 ### 5. Use Subagents for Complex Tasks
@@ -487,9 +465,9 @@ Create skills with `context: fork` for:
 
 ## Feedback and Contributions
 
-Found an issue or want to improve zero-skills?
-- Open an issue: [github.com/zeromicro/zero-skills/issues](https://github.com/zeromicro/zero-skills/issues)
-- Submit a PR: [github.com/zeromicro/zero-skills/pulls](https://github.com/zeromicro/zero-skills/pulls)
+Found an issue or want to improve zero-powers?
+- Open an issue: [github.com/zeromicro/zero-powers/issues](https://github.com/zeromicro/zero-powers/issues)
+- Submit a PR: [github.com/zeromicro/zero-powers/pulls](https://github.com/zeromicro/zero-powers/pulls)
 - Join the community: See main go-zero repository
 
 ---
@@ -499,6 +477,5 @@ Found an issue or want to improve zero-skills?
 - Reference files: ".api files" or "REST API" trigger automatic loading
 - Use goctl: AI runs goctl commands directly in the terminal for code generation
 - Create custom skills: Extend for project-specific patterns
-- Check examples: See [skill-patterns/](../skill-patterns/) for advanced usage
 
 **Need help?** Just ask Claude: "How do I [task] with go-zero?"

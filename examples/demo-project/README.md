@@ -15,7 +15,7 @@ This demo project demonstrates how to use GitHub Copilot + ai-context to develop
 
 ```bash
 # Run setup script
-cd /Users/kevin/Develop/go/zero-skills/examples/demo-project
+cd /Users/kevin/Develop/go/zero-powers/examples/demo-project
 ./setup-demo.sh
 ```
 
@@ -249,6 +249,6 @@ rm -rf demo-workspace
 ## More Resources
 
 - [ai-context](https://github.com/zeromicro/ai-context) - GitHub Copilot instructions
-- [zero-skills](https://github.com/zeromicro/zero-skills) - go-zero knowledge base
+- [zero-powers](https://github.com/zeromicro/zero-powers) - go-zero knowledge base
 - [go-zero Documentation](https://go-zero.dev)
 - [Claude Code Guide](../../getting-started/claude-code-guide.md)

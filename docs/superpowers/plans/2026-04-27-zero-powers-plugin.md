@@ -2,13 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 将 `zero-skills` 单一 skill 重构为 `zero-powers` 插件（10 个 domain skill + 3 个 go-zero agent）
+**Goal:** 将 `zero-powers` 单一 skill 重构为 `zero-powers` 插件（10 个 domain skill + 3 个 go-zero agent）
 
-**Architecture:** 复制并重组现有 zero-skills 文件到插件结构，创建新的 skill SKILL.md 和 agent 文件。共享资源（references/checklists/best-practices/etc.）从原 skill 复制，保持路径一致。
+**Architecture:** 复制并重组现有 zero-powers 文件到插件结构，创建新的 skill SKILL.md 和 agent 文件。共享资源（references/checklists/best-practices/etc.）从原 skill 复制，保持路径一致。
 
 **Tech Stack:** Shell scripting, Markdown, YAML frontmatter, JSON
 
-**Source:** `~/.claude/skills/zero-skills/`
+**Source:** `~/.claude/skills/zero-powers/`
 
 ---
 
@@ -119,10 +119,10 @@ git commit -m "chore: initialize zero-powers plugin directory structure"
 }
 ```
 
-- [ ] **Step 3: Copy LICENSE from zero-skills**
+- [ ] **Step 3: Copy LICENSE from zero-powers**
 
 ```bash
-cp /home/bt/.claude/skills/zero-skills/SKILL.md /tmp/check-license.md
+cp /home/bt/.claude/skills/zero-powers/SKILL.md /tmp/check-license.md
 # LICENSE is MIT, same as go-zero framework
 ```
 
@@ -220,23 +220,23 @@ git commit -m "feat: add plugin metadata, Codex config, license, and gitignore"
 ### Task 3: Copy shared references (12 files)
 
 **Files:**
-- Copy: `~/.claude/skills/zero-skills/references/*.md` → `references/`
+- Copy: `~/.claude/skills/zero-powers/references/*.md` → `references/`
 
 - [ ] **Step 1: Copy all reference files**
 
 ```bash
-cp /home/bt/.claude/skills/zero-skills/references/rest-api-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/rpc-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/database-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/resilience-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/concurrency-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/observability-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/deployment-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/event-driven-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/testing-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/security-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/api-governance-patterns.md references/
-cp /home/bt/.claude/skills/zero-skills/references/goctl-commands.md references/
+cp /home/bt/.claude/skills/zero-powers/references/rest-api-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/rpc-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/database-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/resilience-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/concurrency-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/observability-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/deployment-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/event-driven-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/testing-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/security-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/api-governance-patterns.md references/
+cp /home/bt/.claude/skills/zero-powers/references/goctl-commands.md references/
 ```
 
 - [ ] **Step 2: Verify file count**
@@ -258,16 +258,16 @@ git commit -m "feat: add 12 shared reference pattern guides"
 ### Task 4: Copy checklists, best-practices, troubleshooting
 
 **Files:**
-- Copy: `~/.claude/skills/zero-skills/checklists/*.md` → `checklists/`
-- Copy: `~/.claude/skills/zero-skills/best-practices/overview.md` → `best-practices/`
-- Copy: `~/.claude/skills/zero-skills/troubleshooting/common-issues.md` → `troubleshooting/`
+- Copy: `~/.claude/skills/zero-powers/checklists/*.md` → `checklists/`
+- Copy: `~/.claude/skills/zero-powers/best-practices/overview.md` → `best-practices/`
+- Copy: `~/.claude/skills/zero-powers/troubleshooting/common-issues.md` → `troubleshooting/`
 
 - [ ] **Step 1: Copy all shared resource files**
 
 ```bash
-cp /home/bt/.claude/skills/zero-skills/checklists/*.md checklists/
-cp /home/bt/.claude/skills/zero-skills/best-practices/overview.md best-practices/
-cp /home/bt/.claude/skills/zero-skills/troubleshooting/common-issues.md troubleshooting/
+cp /home/bt/.claude/skills/zero-powers/checklists/*.md checklists/
+cp /home/bt/.claude/skills/zero-powers/best-practices/overview.md best-practices/
+cp /home/bt/.claude/skills/zero-powers/troubleshooting/common-issues.md troubleshooting/
 ```
 
 - [ ] **Step 2: Verify**
@@ -290,17 +290,17 @@ git commit -m "feat: add shared checklists, best-practices, and troubleshooting"
 ### Task 5: Copy and update getting-started guides
 
 **Files:**
-- Copy: `~/.claude/skills/zero-skills/getting-started/*.md` → `getting-started/`
+- Copy: `~/.claude/skills/zero-powers/getting-started/*.md` → `getting-started/`
 - Create: `getting-started/codex-guide.md`
 
 - [ ] **Step 1: Copy existing platform guides**
 
 ```bash
-cp /home/bt/.claude/skills/zero-skills/getting-started/README.md getting-started/
-cp /home/bt/.claude/skills/zero-skills/getting-started/claude-code-guide.md getting-started/
-cp /home/bt/.claude/skills/zero-skills/getting-started/copilot-guide.md getting-started/
-cp /home/bt/.claude/skills/zero-skills/getting-started/cursor-guide.md getting-started/
-cp /home/bt/.claude/skills/zero-skills/getting-started/windsurf-guide.md getting-started/
+cp /home/bt/.claude/skills/zero-powers/getting-started/README.md getting-started/
+cp /home/bt/.claude/skills/zero-powers/getting-started/claude-code-guide.md getting-started/
+cp /home/bt/.claude/skills/zero-powers/getting-started/copilot-guide.md getting-started/
+cp /home/bt/.claude/skills/zero-powers/getting-started/cursor-guide.md getting-started/
+cp /home/bt/.claude/skills/zero-powers/getting-started/windsurf-guide.md getting-started/
 ```
 
 - [ ] **Step 2: Write codex-guide.md**
@@ -366,16 +366,16 @@ git commit -m "feat: add multi-platform getting-started guides including Codex"
 ### Task 6: Copy templates and examples
 
 **Files:**
-- Copy: `~/.claude/skills/zero-skills/templates/project-CLAUDE.md` → `templates/`
-- Copy: `~/.claude/skills/zero-skills/examples/` → `examples/`
+- Copy: `~/.claude/skills/zero-powers/templates/project-CLAUDE.md` → `templates/`
+- Copy: `~/.claude/skills/zero-powers/examples/` → `examples/`
 
 - [ ] **Step 1: Copy templates and examples**
 
 ```bash
-cp /home/bt/.claude/skills/zero-skills/templates/project-CLAUDE.md templates/
-cp /home/bt/.claude/skills/zero-skills/examples/README.md examples/
-cp /home/bt/.claude/skills/zero-skills/examples/verify-tutorial.sh examples/
-cp -r /home/bt/.claude/skills/zero-skills/examples/demo-project examples/
+cp /home/bt/.claude/skills/zero-powers/templates/project-CLAUDE.md templates/
+cp /home/bt/.claude/skills/zero-powers/examples/README.md examples/
+cp /home/bt/.claude/skills/zero-powers/examples/verify-tutorial.sh examples/
+cp -r /home/bt/.claude/skills/zero-powers/examples/demo-project examples/
 ```
 
 - [ ] **Step 2: Verify**

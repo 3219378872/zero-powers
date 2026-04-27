@@ -4,7 +4,7 @@
 
 set -e  # Exit on error
 
-DEMO_DIR="/tmp/zero-skills-demo-$$"
+DEMO_DIR="/tmp/zero-powers-demo-$$"
 RESULTS_FILE="$DEMO_DIR/verification-results.txt"
 
 # Color definitions
@@ -189,7 +189,7 @@ test_content_structure() {
         "Decision Tree"
         "File Priority"
         "Patterns"
-        "zero-skills"
+        "zero-powers"
     )
 
     local missing_sections=()
@@ -208,9 +208,9 @@ test_content_structure() {
     fi
 }
 
-# Test 6: Verify zero-skills References
+# Test 6: Verify zero-powers References
 test_zero_skills_references() {
-    echo "=== Test 6: Verify zero-skills References ==="
+    echo "=== Test 6: Verify zero-powers References ==="
     local test_dir="$DEMO_DIR/reference-test"
     mkdir -p "$test_dir"
     cd "$test_dir"
@@ -219,7 +219,7 @@ test_zero_skills_references() {
     git init -q
     git submodule add -q https://github.com/zeromicro/ai-context.git .ai-context 2>/dev/null
 
-    # Verify zero-skills links
+    # Verify zero-powers links
     local required_links=(
         "rest-api-patterns.md"
         "rpc-patterns.md"
@@ -235,10 +235,10 @@ test_zero_skills_references() {
     done
 
     if [ ${#missing_links[@]} -eq 0 ]; then
-        log_result "zero-skills References" "PASS" "All pattern document references exist"
+        log_result "zero-powers References" "PASS" "All pattern document references exist"
         return 0
     else
-        log_result "zero-skills References" "FAIL" "Missing references: ${missing_links[*]}"
+        log_result "zero-powers References" "FAIL" "Missing references: ${missing_links[*]}"
         return 1
     fi
 }

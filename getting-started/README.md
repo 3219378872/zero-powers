@@ -1,6 +1,6 @@
-# Getting Started with zero-skills
+# Getting Started with zero-powers
 
-This directory contains guides for using zero-skills with different AI coding tools.
+This directory contains guides for using zero-powers with different AI coding tools.
 
 ## Choose Your Tool
 
@@ -88,8 +88,8 @@ This directory contains guides for using zero-skills with different AI coding to
 All tools follow a similar pattern:
 
 ```bash
-# 1. Clone zero-skills to your project
-git clone https://github.com/zeromicro/zero-skills.git .ai-context/zero-skills
+# 1. Clone zero-powers to your project
+git clone https://github.com/zeromicro/zero-powers.git .ai-context/zero-powers
 
 # 2. Configure your tool (see specific guide)
 ```
@@ -98,7 +98,7 @@ Then configure based on your tool:
 
 | Tool | Configuration |
 |------|---------------|
-| Claude Code | Clone to `.claude/skills/zero-skills/` |
+| Claude Code | Clone to `.claude/skills/zero-powers/` |
 | Cursor | Reference in `.cursorrules` |
 | Copilot | Reference in `.github/copilot-instructions.md` |
 | Windsurf | Reference in `.windsurfrules` |

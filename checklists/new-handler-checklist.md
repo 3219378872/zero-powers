@@ -78,7 +78,7 @@
 
 - [ ] 数据库查询有索引支持（看 EXPLAIN）
 - [ ] N+1 查询已避免（批量查询或 JOIN）
-- [ ] 热点数据考虑缓存策略（参考 `best-practices/caching.md`）
+- [ ] 热点数据考虑缓存策略（参考 `references/database-patterns.md#caching-pattern`）
 - [ ] 慢查询阈值配置合理
 
 ### 安全

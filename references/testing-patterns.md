@@ -1,5 +1,17 @@
 # Testing Patterns
 
+## Table of Contents
+- [Architecture Overview](#architecture-overview)
+- [1. Unit Testing](#1-unit-testing)
+- [2. Integration Testing](#2-integration-testing)
+- [3. Contract Testing](#3-contract-testing)
+- [4. Load Testing](#4-load-testing)
+- [5. Go Benchmark](#5-go-benchmark)
+- [6. pprof Profiling](#6-pprof-profiling)
+- [7. Chaos Engineering](#7-chaos-engineering)
+- [8. Test Organization & CI](#8-test-organization--ci)
+- [Best Practices Summary](#best-practices-summary)
+
 Comprehensive testing strategies for go-zero microservices: unit tests, integration tests, contract tests, performance testing, and profiling.
 
 ## Architecture Overview

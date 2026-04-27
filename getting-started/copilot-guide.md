@@ -1,16 +1,16 @@
-# Using zero-skills with GitHub Copilot
+# Using zero-powers with GitHub Copilot
 
-This guide explains how to use zero-skills with [GitHub Copilot](https://github.com/features/copilot) in VS Code.
+This guide explains how to use zero-powers with [GitHub Copilot](https://github.com/features/copilot) in VS Code.
 
 ## Installation
 
-### Step 1: Clone zero-skills
+### Step 1: Clone zero-powers
 
 ```bash
 cd your-gozero-project/
 
 # Clone to a local directory
-git clone https://github.com/zeromicro/zero-skills.git .ai-context/zero-skills
+git clone https://github.com/zeromicro/zero-powers.git .ai-context/zero-powers
 ```
 
 ### Step 2: Create Copilot Instructions
@@ -91,7 +91,7 @@ How do I add middleware to my go-zero API?
 For detailed patterns, ask Copilot to read files:
 
 ```
-@workspace Read .ai-context/zero-skills/references/rest-api-patterns.md and help me create a user API
+@workspace Read .ai-context/zero-powers/references/rest-api-patterns.md and help me create a user API
 ```
 
 ## Example Workflows
@@ -155,7 +155,7 @@ For minimal instructions, use [ai-context](https://github.com/zeromicro/ai-conte
 # .github/copilot-instructions.md
 
 Follow go-zero patterns from .ai-context/ai-context/
-For detailed patterns, see .ai-context/zero-skills/references/
+For detailed patterns, see .ai-context/zero-powers/references/
 ```
 
 ### Open Pattern Files
@@ -226,4 +226,4 @@ Optionally configure in `.vscode/settings.json`:
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
 - [Copilot Chat](https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide)
 - [go-zero Official Docs](https://go-zero.dev)
-- [zero-skills Pattern Guides](../references/)
+- [zero-powers Pattern Guides](../references/)

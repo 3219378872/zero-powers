@@ -2,7 +2,7 @@
 
 ## Overview
 
-将现有的 `zero-skills` 单一 skill 重构为 `zero-powers` 插件，拆分为 10 个领域独立 skill + 3 个 go-zero 专用 agent，面向 Claude Code 和 Codex 双平台。
+将现有的 `zero-powers` 单一 skill 重构为 `zero-powers` 插件，拆分为 10 个领域独立 skill + 3 个 go-zero 专用 agent，面向 Claude Code 和 Codex 双平台。
 
 ## Plugin Metadata
 

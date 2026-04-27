@@ -1,16 +1,16 @@
-# Using zero-skills with Windsurf
+# Using zero-powers with Windsurf
 
-This guide explains how to use zero-skills with [Windsurf](https://codeium.com/windsurf), the AI-powered IDE by Codeium.
+This guide explains how to use zero-powers with [Windsurf](https://codeium.com/windsurf), the AI-powered IDE by Codeium.
 
 ## Installation
 
-### Step 1: Clone zero-skills
+### Step 1: Clone zero-powers
 
 ```bash
 cd your-gozero-project/
 
 # Clone to a local directory
-git clone https://github.com/zeromicro/zero-skills.git .ai-context/zero-skills
+git clone https://github.com/zeromicro/zero-powers.git .ai-context/zero-powers
 ```
 
 ### Step 2: Create .windsurfrules
@@ -58,7 +58,7 @@ w.Write([]byte("error"))
 
 ## Pattern References
 
-Detailed patterns are in .ai-context/zero-skills/:
+Detailed patterns are in .ai-context/zero-powers/:
 - REST APIs: references/rest-api-patterns.md
 - RPC: references/rpc-patterns.md
 - Database: references/database-patterns.md
@@ -104,7 +104,7 @@ Add JWT authentication middleware to all API routes
 For detailed patterns, reference the files:
 
 ```
-Read .ai-context/zero-skills/references/database-patterns.md and help me add Redis caching
+Read .ai-context/zero-powers/references/database-patterns.md and help me add Redis caching
 ```
 
 ### Chat Interface
@@ -159,7 +159,7 @@ What's the correct way to handle errors in go-zero handlers?
 ### Adding Resilience
 
 ```
-Read .ai-context/zero-skills/references/resilience-patterns.md and help me add rate limiting to my API
+Read .ai-context/zero-powers/references/resilience-patterns.md and help me add rate limiting to my API
 ```
 
 ## Tips
@@ -186,7 +186,7 @@ git clone https://github.com/zeromicro/ai-context.git .ai-context/ai-context
 Reference in `.windsurfrules`:
 ```markdown
 Follow go-zero workflows from .ai-context/ai-context/
-Detailed patterns: .ai-context/zero-skills/references/
+Detailed patterns: .ai-context/zero-powers/references/
 ```
 
 ## Limitations
@@ -232,4 +232,4 @@ Compared to Claude Code, Windsurf:
 - [Windsurf Documentation](https://docs.codeium.com/windsurf)
 - [Cascade AI](https://codeium.com/windsurf)
 - [go-zero Official Docs](https://go-zero.dev)
-- [zero-skills Pattern Guides](../references/)
+- [zero-powers Pattern Guides](../references/)

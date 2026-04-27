@@ -1,5 +1,17 @@
 # Observability Patterns
 
+## Table of Contents
+- [Architecture Overview](#architecture-overview)
+- [1. Distributed Tracing](#1-distributed-tracing)
+- [2. Metrics](#2-metrics)
+- [3. Structured Logging](#3-structured-logging)
+- [4. Health Checks](#4-health-checks)
+- [5. Graceful Shutdown](#5-graceful-shutdown)
+- [6. Prometheus Scrape & AlertManager Configuration](#6-prometheus-scrape--alertmanager-configuration)
+- [7. Log Rotation & Retention](#7-log-rotation--retention)
+- [8. Metrics Cardinality Management](#8-metrics-cardinality-management)
+- [Best Practices Summary](#best-practices-summary)
+
 Three pillars of observability for go-zero microservices: Tracing, Metrics, and Logging.
 
 ## Architecture Overview

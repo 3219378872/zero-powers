@@ -1,5 +1,16 @@
 # Event-Driven Patterns for go-zero
 
+## Table of Contents
+- [Overview](#overview)
+- [1. Message Queue Integration](#1-message-queue-integration)
+- [2. CQRS — Command Query Responsibility Segregation](#2-cqrs--command-query-responsibility-segregation)
+- [3. Dead Letter Queue (DLQ)](#3-dead-letter-queue-dlq)
+- [4. Transactional Outbox Pattern](#4-transactional-outbox-pattern)
+- [5. Event Sourcing Lite](#5-event-sourcing-lite)
+- [Decision Matrix](#decision-matrix)
+- [Checklist](#checklist)
+- [Cross-References](#cross-references)
+
 ## Overview
 
 This guide covers event-driven architecture patterns for go-zero microservices:

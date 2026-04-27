@@ -44,16 +44,19 @@ if [ ! -d ".git" ]; then
     echo -e "${GREEN}✓ Git repository initialized${NC}"
 fi
 
-# Configure GitHub Copilot (add ai-context)
+# Configure GitHub Copilot (add ai-context — optional, skipped if unavailable)
 echo ""
 echo "Configuring GitHub Copilot..."
 if [ ! -d ".github/ai-context" ]; then
-    git submodule add -q https://github.com/zeromicro/ai-context.git .github/ai-context 2>/dev/null || echo "Submodule already exists"
-    mkdir -p .github
-    ln -sf ai-context/00-instructions.md .github/copilot-instructions.md
-    echo -e "${GREEN}✓ GitHub Copilot configured${NC}"
-    echo -e "  - Submodule: .github/ai-context"
-    echo -e "  - Instructions: .github/copilot-instructions.md"
+    if git submodule add -q https://github.com/zeromicro/ai-context.git .github/ai-context 2>/dev/null; then
+        mkdir -p .github
+        ln -sf ai-context/00-instructions.md .github/copilot-instructions.md
+        echo -e "${GREEN}✓ GitHub Copilot configured${NC}"
+        echo -e "  - Submodule: .github/ai-context"
+        echo -e "  - Instructions: .github/copilot-instructions.md"
+    else
+        echo -e "${YELLOW}⚠ ai-context submodule unavailable — skipping GitHub Copilot config${NC}"
+    fi
 else
     echo -e "${YELLOW}⚠ GitHub Copilot already configured${NC}"
 fi
@@ -299,7 +302,7 @@ Use the Handler → Logic → Model three-layer architecture.
 ## Resources
 
 - [go-zero Official Docs](https://go-zero.dev)
-- [zero-skills Pattern Guides](https://github.com/zeromicro/zero-skills)
+- [zero-powers Pattern Guides](https://github.com/zeromicro/zero-powers)
 - [ai-context Instructions](https://github.com/zeromicro/ai-context)
 EOF
 
