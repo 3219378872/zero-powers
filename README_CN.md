@@ -17,7 +17,7 @@ git clone https://github.com/zeromicro/zero-powers.git ~/.claude/plugins/zero-po
 
 ## 包含内容
 
-### 10 个领域技能
+### 12 个领域技能
 
 | 技能 | 说明 |
 |------|------|
@@ -31,6 +31,8 @@ git clone https://github.com/zeromicro/zero-powers.git ~/.claude/plugins/zero-po
 | `testing` | 测试 — 单元、集成、契约、负载、基准、混沌 |
 | `security` | 安全 — mTLS、RBAC、OAuth、CORS、审计、API 治理 |
 | `goctl` | 代码生成 — `goctl api go`、`goctl rpc protoc`、`goctl model` 等 |
+| `structure-review` | 项目规范审查 — 动态注入 `.claude/specs/`，结构化 pass/fail 审计 |
+| `zero-init-specs` | 规范初始化 — 扫描代码库识别项目特有约定，生成 spec 文件 |
 
 ### 3 个专用智能体
 

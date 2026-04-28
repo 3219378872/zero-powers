@@ -17,7 +17,7 @@ git clone https://github.com/zeromicro/zero-powers.git ~/.claude/plugins/zero-po
 
 ## What's Included
 
-### 10 Domain Skills
+### 12 Domain Skills
 
 | Skill | Description |
 |-------|-------------|
@@ -31,6 +31,8 @@ git clone https://github.com/zeromicro/zero-powers.git ~/.claude/plugins/zero-po
 | `testing` | Testing — unit, integration, contract, load, benchmarks, chaos |
 | `security` | Security — mTLS, RBAC, OAuth, CORS, audit, API governance |
 | `goctl` | Code generation — `goctl api go`, `goctl rpc protoc`, `goctl model`, etc. |
+| `structure-review` | Project specs review — dynamic injection of `.claude/specs/`, structured pass/fail audit |
+| `zero-init-specs` | Specs initialization — scans codebase for project-specific conventions, generates spec files |
 
 ### 3 Specialized Agents
 
