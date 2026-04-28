@@ -4,11 +4,12 @@
   "description": "go-zero microservices development plugin - domain skills for REST API, gRPC, database, resilience, observability, deployment, event-driven, testing, security, and goctl workflows.",
   "author": {
     "name": "风起",
-    "email": "3219378872@qq.com",
+    "email": "3219378872@qq.com"
   },
   "homepage": "https://github.com/3219378872/zero-powers",
   "repository": "https://github.com/3219378872/zero-powers",
   "license": "MIT",
+  "skills": "./skills/",
   "keywords": [
     "go-zero",
     "microservices",
@@ -19,5 +20,20 @@
     "skills",
     "agents",
     "best-practices"
-  ]
+  ],
+  "interface": {
+    "displayName": "zero-powers",
+    "shortDescription": "go-zero microservices skills for Codex.",
+    "longDescription": "Domain skills for building and reviewing go-zero REST, RPC, database, resilience, observability, deployment, event-driven, testing, security, and goctl workflows.",
+    "developerName": "go-zero Community",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/3219378872/zero-powers",
+    "defaultPrompt": [
+      "Use go-zero guidance for this service.",
+      "Review this go-zero API or RPC change.",
+      "Plan a go-zero service implementation."
+    ],
+    "brandColor": "#00ADD8"
+  }
 }
