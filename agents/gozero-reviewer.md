@@ -45,11 +45,10 @@ When reviewing, reference these domain skills for detailed patterns: rest-api, r
 
 ## Project-Specific Specs Review
 
-After completing go-zero convention checks above, if the preloaded structure-review
-skill injected project specs (i.e. `.claude/specs/` exists and is non-empty),
-perform additional review:
+After completing go-zero convention checks above, use Bash to read `.claude/specs/*.md`.
+If specs files exist and are non-empty, perform additional review:
 
-1. Check each rule from the injected specs
+1. Check each rule from the loaded specs
 2. Merge results into the same review table
 3. Tag each finding with source: "go-zero 通用" or "项目规范:{spec-filename}"
 

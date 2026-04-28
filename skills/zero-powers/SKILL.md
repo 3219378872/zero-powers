@@ -26,7 +26,7 @@ user's specific need and load the appropriate domain skill or reference.
 - **testing** — Unit, integration, contract, load testing
 - **security** — mTLS, RBAC, OAuth 2.0, CORS, audit logging
 - **goctl** — API/RPC/model code generation commands
-- **structure-review** — Dynamic project specs injection and structured review
+- **structure-review** — Project specs review via Bash-loaded `.claude/specs/`, structured pass/fail audit
 - **zero-init-specs** — Interactive project specs initialization from codebase analysis
 
 ## Quick Reference
