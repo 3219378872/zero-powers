@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "go-zero microservices development plugin - domain skills for REST API, gRPC, database, resilience, observability, deployment, event-driven, testing, security, and goctl workflows.",
   "author": {
-    "name": "go-zero Community",
-    "email": "go-zero@go-zero.dev",
-    "url": "https://github.com/zeromicro"
+    "name": "风起",
+    "email": "3219378872@qq.com",
+    "url": "https://github.com/3219378872"
   },
-  "homepage": "https://github.com/zeromicro/zero-powers",
-  "repository": "https://github.com/zeromicro/zero-powers",
+  "homepage": "https://github.com/3219378872/zero-powers",
+  "repository": "https://github.com/3219378872/zero-powers",
   "license": "MIT",
   "keywords": [
     "go-zero",
@@ -31,7 +31,7 @@
       "Interactive",
       "Write"
     ],
-    "websiteURL": "https://github.com/zeromicro/zero-powers",
+    "websiteURL": "https://github.com/3219378872/zero-powers",
     "defaultPrompt": [
       "Use go-zero guidance for this service.",
       "Review this go-zero API or RPC change.",
