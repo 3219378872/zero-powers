@@ -7,7 +7,7 @@ description: >-
   asks to review project conventions, validate structure, or check specs.
 context: fork
 agent: general-purpose
-allowed-tools: Bash(find *) Bash(cat *) Bash(wc *) Bash(tree *) Bash(grep *) Read Grep
+allowed-tools: Bash(find *) Bash(cat *) Bash(wc *) Bash(tree *) Bash(grep *) Bash(ls *) Bash(xargs *) Read Grep
 ---
 
 # 项目规范审查
@@ -15,15 +15,11 @@ allowed-tools: Bash(find *) Bash(cat *) Bash(wc *) Bash(tree *) Bash(grep *) Rea
 ## 项目规范（动态注入）
 
 ```!
-if [ -d ".claude/specs" ] && ls .claude/specs/*.md 1>/dev/null 2>&1; then
-  for f in .claude/specs/*.md; do
-    echo "=== $(basename "$f") ==="
-    cat "$f"
-    echo ""
-  done
+if ls .claude/specs/*.md 1>/dev/null 2>&1; then
+  ls .claude/specs/*.md 2>/dev/null | xargs -I{} sh -c 'echo ===; basename "{}"; cat "{}"; echo'
 else
-  echo "[WARNING] 未找到 .claude/specs/ 目录或其中没有 .md 文件。"
-  echo "请先运行 /zero-powers:zero-init-specs 初始化项目规范。"
+  echo [WARNING] 未找到 .claude/specs/ 目录或其中没有 .md 文件。
+  echo 请先运行 /zero-powers:zero-init-specs 初始化项目规范。
 fi
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "zero-powers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "go-zero microservices development plugin - domain skills for REST API, gRPC, database, resilience, observability, deployment, event-driven, testing, security, and goctl workflows.",
   "author": {
     "name": "风起",
