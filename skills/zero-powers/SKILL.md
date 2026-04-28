@@ -26,6 +26,8 @@ user's specific need and load the appropriate domain skill or reference.
 - **testing** — Unit, integration, contract, load testing
 - **security** — mTLS, RBAC, OAuth 2.0, CORS, audit logging
 - **goctl** — API/RPC/model code generation commands
+- **structure-review** — Dynamic project specs injection and structured review
+- **zero-init-specs** — Interactive project specs initialization from codebase analysis
 
 ## Quick Reference
 
@@ -41,6 +43,8 @@ user's specific need and load the appropriate domain skill or reference.
 | Write tests | testing | [testing-patterns.md](../references/testing-patterns.md) |
 | Auth/CORS | security | [security-patterns.md](../references/security-patterns.md) |
 | Generate code | goctl | [goctl-commands.md](../references/goctl-commands.md) |
+| Review project specs | structure-review | [.claude/specs/](../../.claude/specs/) |
+| Initialize specs | zero-init-specs | [templates/specs/](../templates/specs/) |
 
 ## Shared Resources
 
